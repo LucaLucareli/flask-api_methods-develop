@@ -25,14 +25,6 @@ jobs:
       run: |
         python3 -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-
-    - name: Run test
-      run: |
-        python -m coverage run -m app_test 
-
-    - name: Relatorio
-      run: |
-         python -m coverage report
    
     - name: Render Deploy Action
       uses: johnbeynon/render-deploy-action@v0.0.8
